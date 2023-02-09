@@ -340,9 +340,9 @@ else "Insufficient"</dmn:text>
       </dmn:rule>
     </dmn:decisionTable>
   </dmn:decision>
-  <dmn:decision id="_21C50763-E49F-4D83-A824-16DA6AA87C64" name="Loan Pre-Qualification">
+  <dmn:decision id="_21C50763-E49F-4D83-A824-16DA6AA87C64" name="My Loan Pre-Qualification">
     <dmn:extensionElements/>
-    <dmn:variable id="_047A25F5-DEF2-44BD-95B7-FB49A433F878" name="Loan Pre-Qualification" typeRef="Loan_Qualification"/>
+    <dmn:variable id="_047A25F5-DEF2-44BD-95B7-FB49A433F878" name="My Loan Pre-Qualification" typeRef="Loan_Qualification"/>
     <dmn:informationRequirement id="_A3E95B32-2EFD-40AD-B5E4-0A73A1542011">
       <dmn:requiredDecision href="#_D6F4234F-15B3-4F5B-B814-5F6FF29D2907"/>
     </dmn:informationRequirement>
@@ -501,39 +501,16 @@ else "Insufficient"</dmn:text>
     <dmndi:DMNDiagram id="_1608585F-01C8-4A66-B3E5-F4422D4DD2CA" name="DRG">
       <di:extension>
         <kie:ComponentsWidthsExtension>
-          <kie:ComponentWidths dmnElementRef="_21E8FA38-C947-4733-9E52-CF81A97ADF91">
-            <kie:width>209</kie:width>
-          </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_9F0257EE-CF82-49FD-AEDD-3155890864FF">
-            <kie:width>50</kie:width>
-            <kie:width>209</kie:width>
-          </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_08A9C33D-719F-4B05-AC42-D15464798BC4">
-            <kie:width>50</kie:width>
-            <kie:width>100</kie:width>
-            <kie:width>1280</kie:width>
-          </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_EB658586-C3C8-488E-8118-E69E31583106">
-            <kie:width>50</kie:width>
-            <kie:width>100</kie:width>
-            <kie:width>1110</kie:width>
-          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_21E8FA38-C947-4733-9E52-CF81A97ADF91"/>
+          <kie:ComponentWidths dmnElementRef="_9F0257EE-CF82-49FD-AEDD-3155890864FF"/>
+          <kie:ComponentWidths dmnElementRef="_08A9C33D-719F-4B05-AC42-D15464798BC4"/>
+          <kie:ComponentWidths dmnElementRef="_EB658586-C3C8-488E-8118-E69E31583106"/>
           <kie:ComponentWidths dmnElementRef="_6E79E4D9-BBFB-4E90-8AA3-A6C153C3C946"/>
-          <kie:ComponentWidths dmnElementRef="_51ACEC3C-4207-4F5F-8FDD-9EDAA3270E60">
-            <kie:width>1110</kie:width>
-          </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_5D050B8D-DF55-45FD-988B-9C56BED53D5B">
-            <kie:width>1110</kie:width>
-          </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_14C44A69-56DB-4B68-B757-4225C80E4D88">
-            <kie:width>1110</kie:width>
-          </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_0DB5DE05-A2AD-4013-B191-DC1D1637A132">
-            <kie:width>1110</kie:width>
-          </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_3F95EFD0-94D7-4D1A-9EA9-C8E12982D7E8">
-            <kie:width>1280</kie:width>
-          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_51ACEC3C-4207-4F5F-8FDD-9EDAA3270E60"/>
+          <kie:ComponentWidths dmnElementRef="_5D050B8D-DF55-45FD-988B-9C56BED53D5B"/>
+          <kie:ComponentWidths dmnElementRef="_14C44A69-56DB-4B68-B757-4225C80E4D88"/>
+          <kie:ComponentWidths dmnElementRef="_0DB5DE05-A2AD-4013-B191-DC1D1637A132"/>
+          <kie:ComponentWidths dmnElementRef="_3F95EFD0-94D7-4D1A-9EA9-C8E12982D7E8"/>
           <kie:ComponentWidths dmnElementRef="_A32ED4A5-7B89-40F7-BE25-CDB636FE071C">
             <kie:width>300</kie:width>
           </kie:ComponentWidths>
@@ -576,13 +553,8 @@ else "Insufficient"</dmn:text>
             <kie:width>681</kie:width>
             <kie:width>100</kie:width>
           </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_064FA88E-B06F-4944-85C3-DA86C3F660DD">
-            <kie:width>150</kie:width>
-          </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_478C815E-60C9-4637-AA42-195DF16B63A5">
-            <kie:width>50</kie:width>
-            <kie:width>150</kie:width>
-          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_064FA88E-B06F-4944-85C3-DA86C3F660DD"/>
+          <kie:ComponentWidths dmnElementRef="_478C815E-60C9-4637-AA42-195DF16B63A5"/>
           <kie:ComponentWidths dmnElementRef="_EEDF2C15-7FD7-409F-B23B-F9A198E2135D">
             <kie:width>228</kie:width>
           </kie:ComponentWidths>
@@ -590,6 +562,8 @@ else "Insufficient"</dmn:text>
             <kie:width>50</kie:width>
             <kie:width>228</kie:width>
           </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_21E8FA38-C947-4733-9E52-CF81A97ADF91"/>
+          <kie:ComponentWidths dmnElementRef="_9F0257EE-CF82-49FD-AEDD-3155890864FF"/>
           <kie:ComponentWidths dmnElementRef="_21E8FA38-C947-4733-9E52-CF81A97ADF91">
             <kie:width>209</kie:width>
           </kie:ComponentWidths>
@@ -597,39 +571,14 @@ else "Insufficient"</dmn:text>
             <kie:width>50</kie:width>
             <kie:width>209</kie:width>
           </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_21E8FA38-C947-4733-9E52-CF81A97ADF91">
-            <kie:width>209</kie:width>
-          </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_9F0257EE-CF82-49FD-AEDD-3155890864FF">
-            <kie:width>50</kie:width>
-            <kie:width>209</kie:width>
-          </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_08A9C33D-719F-4B05-AC42-D15464798BC4">
-            <kie:width>50</kie:width>
-            <kie:width>100</kie:width>
-            <kie:width>1280</kie:width>
-          </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_EB658586-C3C8-488E-8118-E69E31583106">
-            <kie:width>50</kie:width>
-            <kie:width>100</kie:width>
-            <kie:width>1110</kie:width>
-          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_08A9C33D-719F-4B05-AC42-D15464798BC4"/>
+          <kie:ComponentWidths dmnElementRef="_EB658586-C3C8-488E-8118-E69E31583106"/>
           <kie:ComponentWidths dmnElementRef="_6E79E4D9-BBFB-4E90-8AA3-A6C153C3C946"/>
-          <kie:ComponentWidths dmnElementRef="_51ACEC3C-4207-4F5F-8FDD-9EDAA3270E60">
-            <kie:width>1110</kie:width>
-          </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_5D050B8D-DF55-45FD-988B-9C56BED53D5B">
-            <kie:width>1110</kie:width>
-          </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_14C44A69-56DB-4B68-B757-4225C80E4D88">
-            <kie:width>1110</kie:width>
-          </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_0DB5DE05-A2AD-4013-B191-DC1D1637A132">
-            <kie:width>1110</kie:width>
-          </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_3F95EFD0-94D7-4D1A-9EA9-C8E12982D7E8">
-            <kie:width>1280</kie:width>
-          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_51ACEC3C-4207-4F5F-8FDD-9EDAA3270E60"/>
+          <kie:ComponentWidths dmnElementRef="_5D050B8D-DF55-45FD-988B-9C56BED53D5B"/>
+          <kie:ComponentWidths dmnElementRef="_14C44A69-56DB-4B68-B757-4225C80E4D88"/>
+          <kie:ComponentWidths dmnElementRef="_0DB5DE05-A2AD-4013-B191-DC1D1637A132"/>
+          <kie:ComponentWidths dmnElementRef="_3F95EFD0-94D7-4D1A-9EA9-C8E12982D7E8"/>
           <kie:ComponentWidths dmnElementRef="_064FA88E-B06F-4944-85C3-DA86C3F660DD">
             <kie:width>150</kie:width>
           </kie:ComponentWidths>

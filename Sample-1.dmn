@@ -166,9 +166,6 @@
     <dmn:knowledgeRequirement id="_63DE7C3B-A767-4B8A-A098-91ECB4B8D330">
       <dmn:requiredKnowledge href="#_FAF9080E-F4EF-49F7-AEFD-0D2990D8FFDA"/>
     </dmn:knowledgeRequirement>
-    <dmn:knowledgeRequirement id="_2C95829D-FCF9-44F5-8F5A-0A6CDB60600D">
-      <dmn:requiredKnowledge href="#_C98BE939-B9C7-43E0-83E8-EE7A16C5276D"/>
-    </dmn:knowledgeRequirement>
     <dmn:context id="_08A9C33D-719F-4B05-AC42-D15464798BC4">
       <dmn:contextEntry>
         <dmn:variable id="_C8F98D0F-218F-4B60-BD99-7FD98078FE56" name="Client PITI" typeRef="number"/>
@@ -415,15 +412,6 @@ else "Insufficient"</dmn:text>
       </dmn:literalExpression>
     </dmn:encapsulatedLogic>
   </dmn:businessKnowledgeModel>
-  <dmn:businessKnowledgeModel id="_C98BE939-B9C7-43E0-83E8-EE7A16C5276D" name="Lender Acceptable PITI">
-    <dmn:extensionElements/>
-    <dmn:variable id="_9D78214B-EC07-4360-8D1B-3D927AC90A20" name="Lender Acceptable PITI" typeRef="number"/>
-    <dmn:encapsulatedLogic id="_E312D80E-0ECE-4D66-87EB-30DE20890BBC" kind="FEEL">
-      <dmn:literalExpression id="_EEDF2C15-7FD7-409F-B23B-F9A198E2135D">
-        <dmn:text>0.28</dmn:text>
-      </dmn:literalExpression>
-    </dmn:encapsulatedLogic>
-  </dmn:businessKnowledgeModel>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="_1608585F-01C8-4A66-B3E5-F4422D4DD2CA" name="DRG">
       <di:extension>
@@ -504,13 +492,6 @@ else "Insufficient"</dmn:text>
             <kie:width>50</kie:width>
             <kie:width>150</kie:width>
           </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_EEDF2C15-7FD7-409F-B23B-F9A198E2135D">
-            <kie:width>228</kie:width>
-          </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_E312D80E-0ECE-4D66-87EB-30DE20890BBC">
-            <kie:width>50</kie:width>
-            <kie:width>228</kie:width>
-          </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
       <dmndi:DMNShape id="dmnshape-drg-_4C788DBD-C672-4F41-9AFE-9C7D2C145734" dmnElementRef="_4C788DBD-C672-4F41-9AFE-9C7D2C145734" isCollapsed="false">
@@ -585,15 +566,6 @@ else "Insufficient"</dmn:text>
         <dc:Bounds x="99.09345794392524" y="359" width="136" height="63"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-drg-_C98BE939-B9C7-43E0-83E8-EE7A16C5276D" dmnElementRef="_C98BE939-B9C7-43E0-83E8-EE7A16C5276D" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="747" y="224.64473684210526" width="134" height="65"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
       <dmndi:DMNEdge id="dmnedge-drg-_89EEAF9F-5A5D-4F59-91B7-EA418A7229AF" dmnElementRef="_89EEAF9F-5A5D-4F59-91B7-EA418A7229AF">
         <di:waypoint x="383.0607476635514" y="361"/>
         <di:waypoint x="599" y="287"/>
@@ -605,10 +577,6 @@ else "Insufficient"</dmn:text>
       <dmndi:DMNEdge id="dmnedge-drg-_63DE7C3B-A767-4B8A-A098-91ECB4B8D330" dmnElementRef="_63DE7C3B-A767-4B8A-A098-91ECB4B8D330">
         <di:waypoint x="814.5" y="359.3421052631579"/>
         <di:waypoint x="599" y="287"/>
-      </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-drg-_2C95829D-FCF9-44F5-8F5A-0A6CDB60600D" dmnElementRef="_2C95829D-FCF9-44F5-8F5A-0A6CDB60600D">
-        <di:waypoint x="814" y="257.14473684210526"/>
-        <di:waypoint x="667" y="256"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_77BA409B-E00D-4FBC-B522-8F656D4F6F0E" dmnElementRef="_77BA409B-E00D-4FBC-B522-8F656D4F6F0E">
         <di:waypoint x="383.0607476635514" y="391.5"/>

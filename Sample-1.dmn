@@ -145,10 +145,6 @@
       <dmn:typeRef>string</dmn:typeRef>
     </dmn:itemComponent>
   </dmn:itemDefinition>
-  <dmn:inputData id="_4C89E59C-FDDA-438C-8D1F-0B1194EF6DAE" name="Credit Score">
-    <dmn:extensionElements/>
-    <dmn:variable id="_A97019FC-EE01-451F-A7AA-5A97ED005FB9" name="Credit Score" typeRef="Credit_Score"/>
-  </dmn:inputData>
   <dmn:businessKnowledgeModel id="_4C788DBD-C672-4F41-9AFE-9C7D2C145734" name="Lender Acceptable DTI">
     <dmn:extensionElements/>
     <dmn:variable id="_85508943-7AD2-4AA0-80E5-20923CA2308D" name="Lender Acceptable DTI" typeRef="number"/>
@@ -274,77 +270,6 @@ else "Insufficient"</dmn:text>
       </dmn:contextEntry>
     </dmn:context>
   </dmn:decision>
-  <dmn:decision id="_2FE51DB1-3083-4BF7-AA71-0B0065310E72" name="Credit Score Rating">
-    <dmn:extensionElements/>
-    <dmn:variable id="_82228E41-22D1-4758-97C3-BBFE90EDB5FB" name="Credit Score Rating" typeRef="Credit_Score_Rating"/>
-    <dmn:informationRequirement id="_31A1B6B2-A2A6-4E03-B898-26573A5CF3BA">
-      <dmn:requiredInput href="#_4C89E59C-FDDA-438C-8D1F-0B1194EF6DAE"/>
-    </dmn:informationRequirement>
-    <dmn:decisionTable id="_4ACEFFF0-AD2C-4DB8-9BAD-7BCCFB03F295" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
-      <dmn:input id="_44C93627-629C-48B8-B71A-AE2266A42674">
-        <dmn:inputExpression id="_00932A00-5ECE-4AEF-AA68-92E679CEF4AB" typeRef="number">
-          <dmn:text>Credit Score.FICO</dmn:text>
-        </dmn:inputExpression>
-      </dmn:input>
-      <dmn:output id="_9C201FAB-B49C-4D22-900B-B4E82D5469FB"/>
-      <dmn:annotation name=""/>
-      <dmn:rule id="_AED703E1-8E56-4D27-A511-3875AD1D122E">
-        <dmn:inputEntry id="_E2C9F30B-D529-48D8-A51C-A2ACCC8109B3">
-          <dmn:text>&gt;= 750</dmn:text>
-        </dmn:inputEntry>
-        <dmn:outputEntry id="_A1FF2B2D-EF34-42AD-A45A-5FFDFA21FA6D">
-          <dmn:text>"Excellent"</dmn:text>
-        </dmn:outputEntry>
-        <dmn:annotationEntry>
-          <dmn:text/>
-        </dmn:annotationEntry>
-      </dmn:rule>
-      <dmn:rule id="_1FA12B9F-288C-42E8-B77F-BE2D3702B7B6">
-        <dmn:inputEntry id="_CA5AE067-0E1A-44CA-B85C-912F9ED4594C">
-          <dmn:text>[700..750)</dmn:text>
-        </dmn:inputEntry>
-        <dmn:outputEntry id="_833307A2-B924-422C-A4F5-BFFAB27D86D5">
-          <dmn:text>"Good"</dmn:text>
-        </dmn:outputEntry>
-        <dmn:annotationEntry>
-          <dmn:text/>
-        </dmn:annotationEntry>
-      </dmn:rule>
-      <dmn:rule id="_11976EBA-60BC-421B-A270-089A45E9B167">
-        <dmn:inputEntry id="_75D612D5-D201-4932-8524-E49183F51D2D">
-          <dmn:text>[650..700)</dmn:text>
-        </dmn:inputEntry>
-        <dmn:outputEntry id="_E18FE2B2-729C-41F0-B5CC-0E5E5EA431E3">
-          <dmn:text>"Fair"</dmn:text>
-        </dmn:outputEntry>
-        <dmn:annotationEntry>
-          <dmn:text/>
-        </dmn:annotationEntry>
-      </dmn:rule>
-      <dmn:rule id="_12F8077F-E601-4882-93E1-31508B1402E1">
-        <dmn:inputEntry id="_61374E7D-4EF3-4603-97A1-9D1FABAAA3C8">
-          <dmn:text>[600..650)</dmn:text>
-        </dmn:inputEntry>
-        <dmn:outputEntry id="_75135F4C-6BA7-4180-B726-A0D795B3D7FF">
-          <dmn:text>"Poor"</dmn:text>
-        </dmn:outputEntry>
-        <dmn:annotationEntry>
-          <dmn:text/>
-        </dmn:annotationEntry>
-      </dmn:rule>
-      <dmn:rule id="_D025254C-9376-4425-8084-451E09243CE2">
-        <dmn:inputEntry id="_6C13B507-FB60-40AD-8F5C-2407F1413A5C">
-          <dmn:text>&lt; 600</dmn:text>
-        </dmn:inputEntry>
-        <dmn:outputEntry id="_1FB7308A-E37B-46EA-8070-C67E2388A869">
-          <dmn:text>"Bad"</dmn:text>
-        </dmn:outputEntry>
-        <dmn:annotationEntry>
-          <dmn:text/>
-        </dmn:annotationEntry>
-      </dmn:rule>
-    </dmn:decisionTable>
-  </dmn:decision>
   <dmn:decision id="_21C50763-E49F-4D83-A824-16DA6AA87C64" name="Loan Pre-Qualification">
     <dmn:extensionElements/>
     <dmn:variable id="_047A25F5-DEF2-44BD-95B7-FB49A433F878" name="Loan Pre-Qualification" typeRef="Loan_Qualification"/>
@@ -353,9 +278,6 @@ else "Insufficient"</dmn:text>
     </dmn:informationRequirement>
     <dmn:informationRequirement id="_0B992F01-BA77-4F06-A830-D8948B467272">
       <dmn:requiredDecision href="#_F0DC8923-5FC7-4200-8BD1-461D5F3714BE"/>
-    </dmn:informationRequirement>
-    <dmn:informationRequirement id="_B6002F33-4888-48C5-B265-636030F8C2DC">
-      <dmn:requiredDecision href="#_2FE51DB1-3083-4BF7-AA71-0B0065310E72"/>
     </dmn:informationRequirement>
     <dmn:decisionTable id="_EF7F404A-939E-4889-95D8-E4053DD1EED9" hitPolicy="FIRST" preferredOrientation="Rule-as-Row">
       <dmn:input id="_58ABD81B-FD16-45C3-9E64-DB271AA917C0">
@@ -566,12 +488,6 @@ else "Insufficient"</dmn:text>
           <kie:ComponentWidths dmnElementRef="_D1F96102-4158-45BB-8C9A-B7A3BE2C0206">
             <kie:width>802</kie:width>
           </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_4ACEFFF0-AD2C-4DB8-9BAD-7BCCFB03F295">
-            <kie:width>50</kie:width>
-            <kie:width>224</kie:width>
-            <kie:width>226</kie:width>
-            <kie:width>335</kie:width>
-          </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_EF7F404A-939E-4889-95D8-E4053DD1EED9">
             <kie:width>50</kie:width>
             <kie:width>227</kie:width>
@@ -597,15 +513,6 @@ else "Insufficient"</dmn:text>
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
-      <dmndi:DMNShape id="dmnshape-drg-_4C89E59C-FDDA-438C-8D1F-0B1194EF6DAE" dmnElementRef="_4C89E59C-FDDA-438C-8D1F-0B1194EF6DAE" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="963" y="359" width="134" height="61"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-drg-_4C788DBD-C672-4F41-9AFE-9C7D2C145734" dmnElementRef="_4C788DBD-C672-4F41-9AFE-9C7D2C145734" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
@@ -649,15 +556,6 @@ else "Insufficient"</dmn:text>
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
         <dc:Bounds x="315" y="225" width="136" height="62"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-drg-_2FE51DB1-3083-4BF7-AA71-0B0065310E72" dmnElementRef="_2FE51DB1-3083-4BF7-AA71-0B0065310E72" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="963" y="225" width="136" height="62"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-drg-_21C50763-E49F-4D83-A824-16DA6AA87C64" dmnElementRef="_21C50763-E49F-4D83-A824-16DA6AA87C64" isCollapsed="false">
@@ -724,20 +622,12 @@ else "Insufficient"</dmn:text>
         <di:waypoint x="167.09345794392524" y="359"/>
         <di:waypoint x="383" y="287"/>
       </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-drg-_31A1B6B2-A2A6-4E03-B898-26573A5CF3BA" dmnElementRef="_31A1B6B2-A2A6-4E03-B898-26573A5CF3BA">
-        <di:waypoint x="1030" y="389.5"/>
-        <di:waypoint x="1031" y="287"/>
-      </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_A3E95B32-2EFD-40AD-B5E4-0A73A1542011" dmnElementRef="_A3E95B32-2EFD-40AD-B5E4-0A73A1542011">
         <di:waypoint x="383" y="256"/>
         <di:waypoint x="600" y="151"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_0B992F01-BA77-4F06-A830-D8948B467272" dmnElementRef="_0B992F01-BA77-4F06-A830-D8948B467272">
         <di:waypoint x="599" y="256"/>
-        <di:waypoint x="600" y="151"/>
-      </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-drg-_B6002F33-4888-48C5-B265-636030F8C2DC" dmnElementRef="_B6002F33-4888-48C5-B265-636030F8C2DC">
-        <di:waypoint x="1031" y="256"/>
         <di:waypoint x="600" y="151"/>
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
